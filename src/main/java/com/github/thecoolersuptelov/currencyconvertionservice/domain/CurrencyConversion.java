@@ -10,7 +10,13 @@ public class CurrencyConversion {
     private Long totalCalculatedAmount;
     private Long quantity;
     private String enviroment;
-
+    public CurrencyConversion(String fromCurrency, String toCurrency, Long quantity, Long totalCalculatedAmount, Long convertionMultiple) {
+        this.fromCurrency = fromCurrency;
+        this.toCurrency = toCurrency;
+        this.convertionMultiple = convertionMultiple;
+        this.totalCalculatedAmount = totalCalculatedAmount;
+        this.quantity = quantity;
+    }
     public CurrencyConversion(String fromCurrency, String toCurrency, Long convertionMultiple, Long totalCalculatedAmount, Long quantity, String enviroment) {
         this.fromCurrency = fromCurrency;
         this.toCurrency = toCurrency;
