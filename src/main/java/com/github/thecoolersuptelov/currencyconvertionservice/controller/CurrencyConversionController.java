@@ -39,7 +39,7 @@ public class CurrencyConversionController {
         //    return new CurrencyConversion(fromCurrency,toCurrency,quantity, 0l, 0l).setEnviroment(environment.getProperty("local.server.port"));
     }
 
-    @GetMapping(value = "/currency-convertion-feign/from/{fromCurrency}/to/{toCurrency}/quantity/{quantity}")
+    @GetMapping(value = "/feign/from/{fromCurrency}/to/{toCurrency}/quantity/{quantity}")
     public CurrencyConversion calculateCurrencyConversionThroughOpenFeign(@PathVariable @NonNull String fromCurrency, @PathVariable @NonNull String toCurrency, @PathVariable @NonNull Long quantity) {
 
         var currencyConversionFromProxy = curExchangeProxy.retriveExchangeValue(fromCurrency, toCurrency);
